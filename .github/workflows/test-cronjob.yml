@@ -1,0 +1,16 @@
+name: Cron Job
+
+on:
+    schedule:
+        - cron: "*/3 * * * *"
+
+jobs:
+    builds:
+        runs-on: ubuntu-latest
+
+
+        steps:
+            - name: testing cron job
+              run: echo "hello from cron job"
+           
+              
