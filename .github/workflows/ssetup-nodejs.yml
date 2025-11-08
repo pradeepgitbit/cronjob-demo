@@ -29,7 +29,7 @@ jobs:
               run: npm init -y && npm install
 
             - name: Run tests
-              run: npm test
+              run: rm -rf node_modules && npm test
 
             - name: Build React App
               run: npm run build
