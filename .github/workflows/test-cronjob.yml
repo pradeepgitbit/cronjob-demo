@@ -1,8 +1,13 @@
 name: Cron Job
 
 on:
-    schedule:
-        - cron: "*/3 * * * *"
+    workflow_dispatch: 
+    push:
+        branches:
+            - main
+            - master
+   # schedule:
+    #    - cron: "*/3 * * * *"
 
 jobs:
     builds:
