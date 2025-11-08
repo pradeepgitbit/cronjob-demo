@@ -1,8 +1,8 @@
 name: Schedule-Test
 
 on:
-  schedule:
-      - cron: "*/5 * * * *"
+  #schedule:
+   #   - cron: "*/5 * * * *"
   workflow_dispatch:
   
     
@@ -16,4 +16,4 @@ jobs:
         run: date -u
 
       - name: show local time (IST)
-        run: dated -d '+5 hours 30 minutes'
+        run: date -d '+5 hours 30 minutes'
