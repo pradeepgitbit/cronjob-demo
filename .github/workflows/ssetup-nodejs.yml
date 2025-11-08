@@ -8,7 +8,7 @@ on:
         branches:
             - main
             - master
-            
+
 
 jobs:
     build:
@@ -53,5 +53,5 @@ jobs:
                 subject: React App Build Successful
                 to: ${{secrets.RECEIVER_EMAIL}}
                 from: ${{secrets.EMAIL_USERNAME}}
-                body: "Build job of ${{github.repository}} for Branch: ${{github.ref_name}}  completed successfully!"
+                body: "Build job of ${{github.repository}} completed successfully!"
                 
