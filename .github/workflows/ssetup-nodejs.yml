@@ -24,15 +24,18 @@ jobs:
               uses: actions/setup-node@v5
               with:
                 node-version: '20.19.0'
+                cache: 'npm'
             
             - name: Install Dependencies
               run: npm init -y && npm install
               
-            - name: Run tests
-              run: npm test
-
+              
+            
             - name: Build React App
-              run: npm run build
+              run: npm run build --if-present
+              
+            - name: Run the tests
+              run: npm test  
 
             # upload Build Artifacts
             - name: Upload Build Artifacts
