@@ -28,6 +28,9 @@ jobs:
             - name: Install Dependencies
               run: npm init -y && npm install
               
+            - name: removing the local mocha and reinstalling it
+              run: rm -rf node_modules/mocha && npm install --save-dev mocha
+              
             - name: Run tests
               run: npm test
 
